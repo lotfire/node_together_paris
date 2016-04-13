@@ -1,0 +1,26 @@
+{
+  "name": "node_together_paris",
+  "version": "1.0.0",
+  "description": "\"learning a lot of stuff with Node Together Paris\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lotfire/node_together_paris.git"
+  },
+  "keywords": [
+    "Node",
+    "NodeTogether",
+    "Paris",
+    "Node",
+    "JavaScript"
+  ],
+  "author": "Lotfi Harrabi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lotfire/node_together_paris/issues"
+  },
+  "homepage": "https://github.com/lotfire/node_together_paris#readme"
+}
