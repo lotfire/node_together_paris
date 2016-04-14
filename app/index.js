@@ -17,9 +17,9 @@ var catImages = [1,2,3,4,5,6];
 
 app.use(express.static('./app/public'));
 
-app.get('/', function(request, response){
-  response.send("<h1>hello cats</h1>");
-});
+// app.get('/', function(request, response){
+//   response.send("<h1>hello cats</h1>");
+// });
 
 app.get('/about', function( req, res) {
   res.send("<div><p>i'm just me!</p></div>");
@@ -39,13 +39,19 @@ app.engine('handlebars', handlebars({
 }));
 
 app.set('views', './app/views');
+//on peut aussi écrire:
+// app.set('views', __dirname + '/views');
+ /*
+  mais attention car __dirname fait référence au dossier où le script est en cours d'éxecution,
+  e.g si j'éxecute c:\user > node c:\app\server.js __dirname fait référence à <user> et non <app> d'où une erreur si <user> ne contient pas des fichiers nécessaire à l'exécution de server.js
+*/
 app.set('view engine', 'handlebars');
 /* end of Setup of Handlebars template engine*/
 
 
-app.get('/motivations', function (req, res) {
+app.get('/', function (req, res) {
   var motivation = pickOne(motivations);
   var image = pickOne(catImages);
-  res.render('motivation', {motivation: motivation}); //la propriété de cette objet est ce qu'on envoie à motivations.hbs
+  res.render('motivation', {motivation: motivation, image: image}); //la propriété de cette objet est ce qu'on envoie à motivations.hbs
    });
 module.exports = app; // the name doesn't matter, we're exporting the value of app as a module
