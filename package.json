@@ -24,6 +24,9 @@
   },
   "homepage": "https://github.com/lotfire/node_together_paris#readme",
   "dependencies": {
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "express-handlebars": "^3.0.0",
+    "motivations": "^1.0.10",
+    "pick-one": "^1.0.0"
   }
 }
